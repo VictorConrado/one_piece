@@ -1,0 +1,455 @@
+/*Elementos base*/
+*{
+    margin: 0;
+    padding: 0;
+   }
+   
+   /*
+   font-family: 'Montserrat', sans-serif;
+   font-family: 'Open Sans', sans-serif;
+   font-family: 'Yellowtail', cursive;
+   */
+   html{
+       font-size: 62.5%;
+   }
+   
+   body{
+       font-family: 'Open Sans', sans-serif;
+       font-size: 2rem;
+       color: var(--dark-blue);
+   }
+   h1, h2, h3, h4, h5, h6 {
+       font-family: 'Montserrat', sans-serif;
+   }
+   h1{
+       font-size: 6rem;
+       text-transform: uppercase;
+   }
+   h2{
+       font-size: 5.5rem;
+   }
+   h3{
+       font-size: 4.5rem;
+   }
+   h4{
+       font-size: 4rem;
+   }
+   h5{
+       font-size:3.5rem;
+   }
+   h6{
+       font-size: 3rem;
+   }
+   a{
+       text-decoration: none;
+   }
+/*Elementos base*/
+
+/*Variaveis e keyframes*/
+:root{
+    --dark-blue: #03045e;
+    --white-color:#ffff;
+    --light-gray-color:#EEEEEE;
+    --gap:2rem;
+}
+
+@keyframes deslizaesquerda {
+ from{
+    transform: translate(1000px);
+ }
+ to{
+    transform: translateX(0);
+ }
+}
+.deslizaesquerda{
+    animation: deslizaesquerda 1s ease-in-out;
+}
+
+@keyframes deslizadireita{
+    from{
+       transform: translate(-1000px);
+    }
+    to{
+       transform: translateX(0);
+    }
+   }
+   .deslizadireita{
+       animation: deslizadireita 1s ease-in-out;
+   }
+
+@keyframes balanco{
+   0%{
+      transform: translateY(0);
+   }
+   40%{
+      transform: translateY(-30px);
+   }
+   100%{
+      transform: translateY(0);
+   }
+}
+/*Variaveis e keyframes*/
+
+/*Classes e menu*/
+
+.main-bg{
+    background-image: url('../img/main_bg.svg');
+    background-size: cover;
+    background-position: center center;
+    color: var(--white-color);
+}
+.white-bg{
+    background: var(--white-color);
+    color: var(--dark-blue);
+}
+
+
+.logo img{
+    padding: 15px;
+  max-width: 35%;
+  height: auto; 
+}
+
+.section {
+    min-height: 100vh;
+}
+
+.menu-spacing{
+    height: 120px;
+}
+
+.full-width{
+    width: 100%;
+ 
+}
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-bottom: 0.01rem var(--light-gray-color);
+    z-index: 1000;
+}
+.menu-content{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     text-align: center;
+     padding-top: 0;
+     padding-bottom: 0;
+}
+.menu h1{
+    font-size: 3.3rem;
+    color: var(--dark-blue);
+    margin-right: 300px;
+}
+.menu h1 a{
+    color: inherit;
+    padding-top: 2rem;
+    /*padding-left: 24rem;
+    float: left;
+    margin-right: 228px;*/
+}
+.menu ul{
+    display: flex;
+    list-style: none;
+}
+.menu ul li a{
+    display: block;
+    padding: 2rem;
+    font-size: 1.8rem;
+    color: var(--dark-blue);
+    position: relative;
+    float: right;
+    margin-right: 45px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 34px;
+}
+
+.menu ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: 0;
+    height: 0.2rem;
+    background: red;
+    transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover:after{
+    width: 50%;
+    left: 25%;
+}.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-bottom: 0.01rem var(--light-gray-color);
+    z-index: 1000;
+}
+.menu-content{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     text-align: center;
+     padding-top: 0;
+     padding-bottom: 0;
+}
+.menu h1{
+    font-size: 3.3rem;
+    color: var(--dark-blue);
+    margin-right: 300px;
+}
+.menu h1 a{
+    color: inherit;
+    padding-top: 2rem;
+    /*padding-left: 24rem;
+    float: left;
+    margin-right: 228px;*/
+}
+.menu ul{
+    display: flex;
+    list-style: none;
+}
+.menu ul li a{
+    display: block;
+    padding: 2rem;
+    font-size: 1.8rem;
+    color: var(--dark-blue);
+    position: relative;
+    float: right;
+    margin-right: 45px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 34px;
+}
+
+.menu ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: 0;
+    height: 0.2rem;
+    background: red;
+    transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover:after{
+    width: 50%;
+    left: 25%;
+}
+/*Classes e menu*/
+
+/*Intro*/
+.intro-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+    height: 100vh;
+}
+
+.intro-text-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    padding-left: 24rem;
+    
+}
+
+.intro-text-content h2{
+    font-size: 10rem;
+    text-transform: uppercase;
+}
+.intro-text-content p{
+    font-size: 3.2rem;
+}
+.intro-img img{
+    max-width: 100%;
+    height: auto;
+    
+   /* margin-top: 175px; no chrome*/
+   margin-top: 215px;
+    margin-left: auto;
+    margin-right: auto;
+
+    height: 1016px;
+
+}
+/*Intro*/
+
+/*autor*/
+.second-content{
+    align-items: center;
+    padding-left: 70rem;
+}
+
+.life-oda{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    padding-left: 24rem;
+    max-width: 80rem;
+    display: flex;
+    flex-flow:column wrap;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.life-oda h2{
+    font-size: 10rem;
+    text-transform: uppercase;
+}
+.life-oda p{
+    font-size: 3.2rem;
+}
+/*autor*/
+
+/*personagens*/
+.personagem{
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.personagem ul{
+    display: flex;
+    list-style: none;
+    padding-top: 10rem;
+    padding-left: 25rem;
+    flex-wrap: wrap;
+    
+}
+
+.personagem ul li{
+   flex: 0 0 auto;
+   margin: 2rem;
+}
+
+.personagem ul li a{
+    display: block;
+    margin-top: 10px;
+    font-size: 1.8rem;
+    color: var(--white-color);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 34px;
+}
+
+.personagem img{
+    width: 400px;
+    clip-path: circle();
+   justify-content: space-between 20rem;
+}
+
+.personagem li:hover{
+    animation: balanco 1.5s ease-in-out;
+}
+/*personagens*/
+/*Manga*/
+.manga{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10rem;
+    padding-left: 55rem;
+    padding-right: 33rem;
+    padding-bottom: 10rem;
+}
+.manga img{
+    margin-right: 6rem;
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: all 300ms ease-in-out;
+}
+.manga img:hover{
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+}
+/*Manga*/
+/*Fim da pagina e cadastro*/
+hr{
+    padding-top: 0;
+    border: 30px solid  var(--white-color); 
+    margin: -535px 0;
+}
+.final-img img{
+    padding-top: 11rem;
+    padding-left: -350rem;
+    width: 1205px;
+    height: auto;
+    padding-bottom: 0rem;
+
+}
+.cons-finais{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+    height: 100vh;
+}
+
+.paragrafo{
+    padding-left: 50rem;
+    padding-top: 15rem;
+    padding-bottom: 0rem;
+}
+.paragrafo h2{
+    font-size: 10rem;
+} 
+.paragrafo p{
+    font-size: 3.2rem; 
+}
+
+.contact-form{
+    grid-column: span 2;
+    padding: 0 5rem;
+   margin: 0 auto;
+   min-height: 400px; 
+  max-height: 800px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.2rem;
+}
+  
+.contact-form .form-group{
+  border: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+.form-group{
+    flex: 1 1 320px;
+}
+.form-group label{
+ display: block;
+ font-family: 'Montserrat', sans-serif;
+}
+.form-group input,
+.form-group textarea{
+    border:none;
+    background: var(--white-color);
+    padding: 1.5rem 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 30px;
+}
+.form-group button{
+    border: 1rem solid var(--white-color);
+    background: none;
+    color: var(--white-color);
+    padding: 1.5rem 120rem;
+    font-size: 3rem;
+    cursor: pointer;
+    width: 100%; 
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 300ms ease-in-out;
+}
+.form-group button:hover{
+    border: 1rem solid var(--dark-blue);
+    background: var(--dark-blue);
+}
+/*Fim da pagina e cadastro*/
+
